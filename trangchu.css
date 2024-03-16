@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px;
+    background-color: black;
+    display: flex;
+}
+
+header marquee {
+    color: white;
+    font-size: 15px;
+    display: flex;
+}
+
+header a {
+    margin-left: 150px;
+}
+
+#logoshop img {
+    float: center;
+    display: flex;
+    margin: auto;
+}
+
+#list-menu img {
+    width: 3%;
+    height: auto;
+    margin: 15px;
+}
+
+.menu {
+    display: flex;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 15px;
+}
+
+.menu li {
+    list-style-type: none;
+    margin: auto;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 4px;
+    color: black;
+    transition: box-shadow .4s, color .3s;
+    box-shadow: 0 3px tomato;
+}
+
+.menu a:hover {
+    color: orangered;
+    box-shadow: 0 3px yellow;
+}
+
+.menu .sub-menu {
+    position: absolute;
+    display: none;
+    top: auto;
+    left: auto;
+}
+
+.menu .sub-menu li {
+    padding: 5px;
+}
+
+.menu li:hover .sub-menu {
+    display: block;
+    background-color: white;
+}
+
+#img-bg img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.slides {
+    width: 1200px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.slides input {
+    display: none;
+}
+
+.slides-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 1200px;
+    height: 700px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 150px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #fff;
+    font-size: 160px;
+    text-align: center;
+    line-height: 380px;
+    font-family: sans-serif;
+    background-color: rgba(255, 255, 255, .5);
+    text-shadow: 0 0 15px rgb(199, 199, 199);
+}
+
+.slide:hover+.nav label {
+    opacity: 0.5;
+}
+
+.nav label {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+input:checked+.slides-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked+.slides-container .nav label {
+    display: block;
+}
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -10px;
+    width: 11px;
+    height: 11px;
+    margin: 0.4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+input#img-1:checked~.nav-dots label#img-dot-1,
+input#img-2:checked~.nav-dots label#img-dot-2,
+input#img-3:checked~.nav-dots label#img-dot-3,
+input#img-4:checked~.nav-dots label#img-dot-4,
+input#img-5:checked~.nav-dots label#img-dot-5,
+input#img-6:checked~.nav-dots label#img-dot-6 {
+    background-color: #333;
+}
+
+.discount {
+    display: flex;
+    margin: 0;
+}
+
+#discount {
+    text-align: center;
+    margin: 30px 0 0 0;
+    font-size: 25px;
+    color: brown;
+    font-family: monospace;
+}
+
+.discount img {
+    width: 20%;
+    height: auto;
+    float: left;
+    border: 1px dashed gainsboro;
+    border-radius: 10px 0 0 30px;
+    padding: 0 0 30px 0;
+    margin-right: 5px;
+}
+
+.discount .details {
+    border: 2px dashed gainsboro;
+    margin: 10px 50px 10px 50px;
+    border-radius: 10px 30px 10px 30px;
+}
+
+.details button {
+    margin-top: 5px;
+    float: right;
+    margin-right: 25px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+
+.details h2 {
+    font-size: 25px;
+    color: orange;
+    margin: 5px 10px 5px 0;
+}
+
+.details p {
+    color: gray;
+
+}
+
+.section {
+    margin: 50px 150px 50px 150px;
+}
+
+.section p {
+    text-align: center;
+}
+
+.section h1 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: monospace;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.section ul {
+    display: flex;
+    margin: 20px 200px 20px 200px;
+}
+
+.section li {
+    margin: auto;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section #product1 {
+    transition: box-shadow .4s, color .3s;
+    box-shadow: 0 3px tomato;
+    margin: 5px 10px 5px 0;
+}
+
+.section button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+.product p {
+    color: palevioletred;
+    margin: 10px 0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.product {
+    width: calc(25% - 20px);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.product p {
+    color: black;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.select-product-1 img {
+    width: calc(33.33% - 50px);
+    height: auto;
+    margin: 0 20px 20px 20px;
+}
+
+.select-product-2 img {
+    width: calc(15% - 4px);
+    height: auto;
+    margin: 0 10px 20px 10px;
+}
+
+.infor {
+    display: flex;
+    padding: 10px;
+}
+
+.infor h1 {
+    font-size: 20px;
+    color: rgb(74, 73, 73);
+    margin-bottom: 10px;
+}
+
+.infor li {
+    margin: auto;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.infor .logo img {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+}
+
+.infor img {
+    width: 200px;
+    height: 100px;
+}
+
+.sub-infor img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#footer {
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px dashed gainsboro;
+    text-align: center;
+    padding: 20px;
+}
